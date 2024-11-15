@@ -1,4 +1,4 @@
-# G01_AgendaFacilNaF# 🗓️ AgendaFácil NAF - MVP Front-End 
+🗓️ AgendaFácil NAF - MVP Front-End 
 
 Bem-vindo ao repositório do **AgendaFácil NAF**, uma plataforma web inovadora desenvolvida para modernizar e facilitar o processo de agendamento digital no **Núcleo de Apoio Contábil e Fiscal (NAF)** da **UNIFESO** (*Centro Universitário Serra dos Órgãos*).
 

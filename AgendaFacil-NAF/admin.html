@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel do Administrador</title>
+    <link rel="stylesheet" href="css/pages/admin.css" />
+    <link rel="stylesheet" href="components/header/header.css" />
+    <link rel="stylesheet" href="components/footer/footer.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="container">
+      <!-- Barra lateral -->
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#cadastro">Cadastro de Horários</a></li>
+          <li><a href="#usuarios">Usuários</a></li>
+          <li><a href="#agendamentos">Agendamentos</a></li>
+          <li><a href="#mensagensDeContato">Mensagens de Contato</a></li>
+          <li><a href="#horariosDefinidosSection">Horários Definidos</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <!-- Seção de Cadastro de Horários -->
+        <section id="cadastro" class="section">
+          <h2>Cadastrar Datas e Horários Disponíveis</h2>
+          <form id="cadastroForm">
+            <div class="form-group">
+              <label for="data">Data:</label>
+              <input type="date" id="data" required />
+            </div>
+            <div class="form-group">
+              <label for="horaInicio">Hora de Início:</label>
+              <input type="time" id="horaInicio" required />
+            </div>
+            <div class="form-group">
+              <label for="horaFim">Hora de Término:</label>
+              <input type="time" id="horaFim" required />
+            </div>
+            <button type="submit">Cadastrar</button>
+          </form>
+        </section>
+
+        <!-- Seção de Usuários Cadastrados -->
+        <section id="usuarios" class="section">
+          <h2>Usuários Cadastrados</h2>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchUser"
+              class="search-bar"
+              placeholder="Pesquisar por nome..."
+            />
+            <select id="filterTipoUsuario">
+              <option value="">Todos os tipos</option>
+              <option value="estudante">Estudante</option>
+              <option value="professor">Professor</option>
+              <option value="cidadão">Cidadão</option>
+              <option value="administrador">Administrador</option>
+            </select>
+            <button id="searchButton">Pesquisar</button>
+          </div>
+
+          <table id="userList">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome Completo</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Tipo</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Usuários serão listados aqui -->
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Modal de Email -->
+        <div id="emailModal" class="modal">
+          <div class="modal-content">
+            <span id="closeEmailModal" class="close">&times;</span>
+            <h2>Enviar Email</h2>
+            <form id="emailForm">
+              <div class="form-group">
+                <label for="emailTo">Para:</label>
+                <input type="email" id="emailTo" name="emailTo" required />
+              </div>
+              <div class="form-group">
+                <label for="emailSubject">Assunto:</label>
+                <input
+                  type="text"
+                  id="emailSubject"
+                  name="emailSubject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="emailBody">Mensagem:</label>
+                <textarea id="emailBody" name="emailBody" required></textarea>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Seção de Agendamentos -->
+        <section id="agendamentos" class="section">
+          <h2>Agendamentos</h2>
+          <table id="agendamentoList">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Cidadão</th>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Status</th>
+                <th>Opções</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <!-- Seção de Mensagens de Contato -->
+        <section id="mensagensDeContato" class="section">
+          <h2>Mensagens de Contato</h2>
+          <div id="contatoList" class="contato-list"></div>
+        </section>
+
+        <!-- Seção de Horários Definidos -->
+        <section id="horariosDefinidosSection" class="section">
+          <h2>Horários Definidos</h2>
+          <div id="horariosDefinidos" class="horarios-container"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal de Detalhes -->
+    <div id="detalhesModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Detalhes do Agendamento</h2>
+        <div id="detalhesContent"></div>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="components/header/header.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="js/pages/admin.js"></script>
+  </body>
+</html>

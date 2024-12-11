@@ -7,7 +7,6 @@ body {
   color: #333;
 }
 
-/* Container principal */
 .container {
   max-width: 600px;
   margin: 70px auto;
@@ -32,11 +31,9 @@ form {
   gap: 20px;
 }
 
-/* Grupos de formulário */
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
 }
 
 label {
@@ -45,18 +42,16 @@ label {
   color: #006b64;
 }
 
-input[type="text"],
-select,
+input,
 textarea,
 button {
-  padding: 12px;
+  padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 input:focus,
-select:focus,
 textarea:focus {
   border-color: #006b64;
   outline: none;
@@ -90,34 +85,62 @@ button:hover {
 
 .modal-content {
   background-color: #fff;
-  margin: 10% auto;
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px;
+  max-width: 400px;
   border-radius: 8px;
+  text-align: center;
 }
 
-.close {
+.close-btn {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-btn:hover,
+.close-btn:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Estilos para os termos e condições */
-.terms {
-  display: flex;
-  align-items: center;
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 }
 
-.terms input[type="checkbox"] {
-  margin-right: 10px;
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
 }

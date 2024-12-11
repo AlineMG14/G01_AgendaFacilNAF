@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Atendimentos - Professor</title>
+    <link rel="stylesheet" href="css/pages/professor.css" />
+    <link rel="stylesheet" href="components/header/header.css" />
+    <link rel="stylesheet" href="components/footer/footer.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="container">
+        <h2>Gerenciamento de Atendimentos - Professor</h2>
+        <div class="filters">
+          <button onclick="filtrarAtendimentos('naoAvaliados')">
+            Não Avaliados
+          </button>
+          <button onclick="filtrarAtendimentos('avaliados')">Avaliados</button>
+          <button onclick="filtrarAtendimentos('apoio')">
+            Solicitaram Apoio
+          </button>
+          <button onclick="filtrarAtendimentos('agendado')">Agendado</button>
+          <button onclick="filtrarAtendimentos('confirmado')">
+            Confirmado
+          </button>
+        </div>
+        <section id="atendimentos-finalizados">
+          <h3>Atendimentos</h3>
+          <div id="finalizadosList">
+            <!-- Lista de atendimentos finalizados será carregada dinamicamente -->
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+
+    <script src="components/header/header.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="js/pages/professor.js"></script>
+  </body>
+</html>

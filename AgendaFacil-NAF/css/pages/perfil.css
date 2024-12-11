@@ -1,0 +1,201 @@
+/* Estilização geral */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Títulos */
+h2,
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #006b64;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #006b64;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #006b64;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #006b64;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 107, 100, 0.5);
+}
+
+button {
+  background-color: #006b64;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #005859;
+}
+
+/* Foto de Perfil */
+.foto-perfil-preview {
+  display: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+/* Lista de Agendamentos */
+#agendamentosList .agendamento-item {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#agendamentosList .agendamento-item p {
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+}
+
+#agendamentosList .agendamento-item p span {
+  font-weight: bold;
+}
+
+#agendamentosList .agendamento-item button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#agendamentosList .agendamento-item button:hover {
+  background-color: #c9302c;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.9rem;
+  }
+
+  .foto-perfil-preview {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.8rem;
+  }
+
+  .foto-perfil-preview {
+    width: 60px;
+    height: 60px;
+  }
+}

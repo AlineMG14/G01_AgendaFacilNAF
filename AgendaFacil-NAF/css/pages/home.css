@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 45px;
+}
+
+/* Carrossel */
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+  margin: 0;
+}
+
+/* Itens do Carrossel */
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Imagens do Carrossel */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Botão fixo sobre as imagens */
+.booking-btn {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: #006b64;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Efeito de hover para o botão */
+.booking-btn:hover {
+  background-color: #004f47;
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de foco (para quando o botão está em foco com o teclado) */
+.booking-btn:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 180, 255, 0.7);
+}
+
+/* Botões de navegação */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* Ícones de seta - ajustando para que não sobreponham */
+.carousel-button i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Coloca os botões à esquerda e à direita */
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+/* Efeito de hover para os botões */
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Ajustes para o mapa aparecer apenas em dispositivos móveis */
+.map-mobile {
+  display: none;
+}
+
+/* Ajuste de responsividade para telas menores */
+@media (max-width: 768px) {
+  .carousel-button {
+    font-size: 20px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+  }
+
+  /* Ajustar o botão de agendamento para telas pequenas */
+  .booking-btn {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Mapa para dispositivos móveis */
+  .map-mobile {
+    display: block;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .map-mobile h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}

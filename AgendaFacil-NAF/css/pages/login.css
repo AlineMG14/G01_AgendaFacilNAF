@@ -9,7 +9,7 @@ body {
 
 /* Container principal */
 .container {
-  max-width: 600px;
+  max-width: 400px;
   margin: 70px auto;
   padding: 20px;
   background-color: #fff;
@@ -45,9 +45,7 @@ label {
   color: #006b64;
 }
 
-input[type="text"],
-select,
-textarea,
+input,
 button {
   padding: 12px;
   font-size: 1rem;
@@ -55,14 +53,13 @@ button {
   border-radius: 4px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+input:focus {
   border-color: #006b64;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 107, 100, 0.5);
 }
 
+/* Botão */
 button {
   background-color: #006b64;
   color: #fff;
@@ -73,6 +70,22 @@ button {
 
 button:hover {
   background-color: #005859;
+}
+
+/* Links extras */
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.extra-links a {
+  color: #006b64;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
 }
 
 /* Modal */
@@ -90,11 +103,11 @@ button:hover {
 
 .modal-content {
   background-color: #fff;
-  margin: 10% auto;
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px;
+  max-width: 500px;
   border-radius: 8px;
 }
 
@@ -110,14 +123,4 @@ button:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* Estilos para os termos e condições */
-.terms {
-  display: flex;
-  align-items: center;
-}
-
-.terms input[type="checkbox"] {
-  margin-right: 10px;
 }

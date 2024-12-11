@@ -1,0 +1,181 @@
+/* Estilização geral */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 70px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #006b64;
+  text-align: center;
+}
+
+section {
+  margin-top: 30px;
+}
+
+#finalizadosList {
+  margin-top: 20px;
+}
+
+.item {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+.item p {
+  margin: 5px 0;
+}
+
+.item p span {
+  font-weight: bold;
+  color: #006b64;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #006b64;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005859;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  margin: 0 10px;
+}
+
+#avaliacao-1733786652455 {
+  width: 80%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0, 107, 100, 0.5);
+  transition: box-shadow 0.3s;
+}
+
+#avaliacao-1733786652455:focus {
+  outline: none;
+  border-color: #006b64;
+  box-shadow: 0 0 8px rgba(0, 107, 100, 0.8);
+}
+
+#avaliacao-1733786652455::placeholder {
+  color: #aaa;
+}
+
+#nota-1733786652455 {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0, 107, 100, 0.5);
+  transition: box-shadow 0.3s;
+}
+
+#nota-1733786652455:focus {
+  outline: none;
+  border-color: #006b64;
+  box-shadow: 0 0 8px rgba(0, 107, 100, 0.8);
+}
+
+#nota-1733786652455::placeholder {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .item {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters button {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .item {
+    padding: 5px;
+  }
+
+  button {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters button {
+    margin: 8px 0;
+  }
+}

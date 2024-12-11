@@ -1,0 +1,113 @@
+header {
+  background-color: #006b64;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Arial", sans-serif;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+header .logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Menu de Navegação */
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 40px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header nav ul li a:hover {
+  color: #005859;
+}
+
+/* Estilos para o Menu Hamburguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Estilos para as informações do usuário */
+.user-info {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: auto;
+  max-width: calc(100% - 240px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo do menu em telas menores (Mobile) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    right: 10px;
+    top: 15px;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #006b64;
+    width: 100%;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .user-info {
+    display: none;
+  }
+}

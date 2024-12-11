@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="components/header/header.css" />
+    <link rel="stylesheet" href="components/footer/footer.css" />
+    <link rel="stylesheet" href="css/pages/cadastro.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="cadastroForm" class="form-grid">
+          <div class="form-group full-width">
+            <label for="tipoUsuario">Tipo de Usuário:</label>
+            <select
+              id="tipoUsuario"
+              name="tipoUsuario"
+              class="full-width"
+              required
+            >
+              <option value="" disabled selected>
+                Selecione o tipo de usuário
+              </option>
+              <option value="cidadão">Cidadão</option>
+              <option value="estudante">Estudante</option>
+              <option value="professor">Professor</option>
+              <option value="administrador">Administrador</option>
+            </select>
+          </div>
+
+          <div id="camposAdicionais"></div>
+
+          <div class="form-group full-width terms">
+            <input type="checkbox" id="termos" name="termos" required />
+            <label for="termos">
+              Eu li e concordo com os
+              <a href="#" id="mostrarTermos">termos e condições</a>.
+            </label>
+          </div>
+
+          <div class="form-group form-submit">
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Modal para Termos e Condições -->
+    <div id="termosModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Termos e Condições</h2>
+        <p>
+          Ao utilizar nossos serviços, você concorda em cumprir e estar sujeito
+          aos seguintes termos e condições, que podem ser atualizados por nós
+          periodicamente sem aviso prévio. Recomendamos que você reveja estes
+          termos regularmente.
+        </p>
+
+        <h3>1. Aceitação dos Termos</h3>
+        <p>
+          Ao utilizar nossos serviços, você concorda em cumprir e estar sujeito
+          aos seguintes termos e condições, que podem ser atualizados por nós
+          periodicamente sem aviso prévio. Recomendamos que você reveja estes
+          termos regularmente.
+        </p>
+
+        <h3>2. Cadastro de Usuário</h3>
+        <p>
+          Para utilizar nossos serviços, você deve se registrar fornecendo
+          informações precisas e completas. Você é responsável por manter a
+          confidencialidade da sua senha e conta, e por todas as atividades que
+          ocorrem sob sua conta.
+        </p>
+
+        <h3>3. Política de Privacidade</h3>
+        <p>
+          Nos comprometemos a proteger a sua privacidade e seus dados pessoais.
+          Todas as informações coletadas de você serão usadas de acordo com
+          nossa Política de Privacidade. Por favor, reveja nossa Política de
+          Privacidade para entender como tratamos seus dados pessoais.
+        </p>
+
+        <h3>4. Agendamento e Cancelamento</h3>
+        <p>
+          Os agendamentos devem ser feitos com antecedência e você deve
+          comparecer ao local na data e hora agendada. Caso precise cancelar ou
+          remarcar, faça isso com pelo menos 24 horas de antecedência.
+        </p>
+
+        <h3>5. Uso do Serviço</h3>
+        <p>
+          Você concorda em usar nossos serviços apenas para fins legais e de
+          acordo com todas as leis locais, estaduais, nacionais e internacionais
+          aplicáveis. Você concorda em não usar nossos serviços para qualquer
+          atividade ilegal ou não autorizada.
+        </p>
+
+        <h3>6. Limitação de Responsabilidade</h3>
+        <p>
+          Nós não seremos responsáveis por qualquer dano direto, indireto,
+          incidental, especial, consequente ou exemplar, incluindo, mas não se
+          limitando a, danos por perda de lucros, boa vontade, uso, dados ou
+          outras perdas intangíveis (mesmo que tenhamos sido avisados da
+          possibilidade desses danos), resultantes de: (i) uso ou incapacidade
+          de usar o serviço; (ii) acesso não autorizado ou alteração de suas
+          transmissões ou dados; (iii) declarações ou conduta de qualquer
+          terceiro no serviço; ou (iv) qualquer outro assunto relacionado ao
+          serviço.
+        </p>
+
+        <h3>7. Modificações no Serviço</h3>
+        <p>
+          Reservamo-nos o direito de modificar ou descontinuar, temporariamente
+          ou permanentemente, o serviço (ou qualquer parte dele) com ou sem
+          aviso prévio. Você concorda que não seremos responsáveis perante você
+          ou qualquer terceiro por qualquer modificação, suspensão ou
+          descontinuação do serviço.
+        </p>
+
+        <h3>8. Encerramento</h3>
+        <p>
+          Podemos encerrar ou suspender sua conta e proibir o uso de nossos
+          serviços a nosso exclusivo critério, sem aviso prévio ou
+          responsabilidade, por qualquer motivo, incluindo, mas não se limitando
+          a, violação destes termos.
+        </p>
+
+        <h3>9. Disposições Gerais</h3>
+        <p>
+          Estes termos constituem o acordo integral entre você e nós e governam
+          o uso do serviço, substituindo quaisquer acordos anteriores entre você
+          e nós. Você também pode estar sujeito a termos e condições adicionais
+          que podem se aplicar quando você usar serviços afiliados, conteúdo de
+          terceiros ou software de terceiros.
+        </p>
+
+        <h3>10. Contato</h3>
+        <p>
+          Se você tiver alguma dúvida sobre estes termos, por favor, entre em
+          contato conosco através do nosso e-mail de suporte:
+          suporte@agendafacil.com.br.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal para Validação de Identidade -->
+    <div id="validacaoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-validacao">&times;</span>
+        <h2>Validação de Identidade</h2>
+        <p>
+          Obrigado pelo seu cadastro! Enviaremos um e-mail para validar sua
+          identidade. Por favor, aguarde as instruções que serão enviadas para
+          seu e-mail.
+        </p>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="components/header/header.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="js/pages/cadastro.js"></script>
+  </body>
+</html>

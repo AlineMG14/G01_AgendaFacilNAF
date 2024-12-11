@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendar Atendimento NAF</title>
+    <link rel="stylesheet" href="css/pages/agendamento.css" />
+    <link rel="stylesheet" href="components/header/header.css" />
+    <link rel="stylesheet" href="components/footer/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="container">
+        <h2>Agendar Atendimento NAF</h2>
+        <form id="agendamentoForm" class="form-grid">
+          <div class="form-group full-width">
+            <label for="nomeCompleto">Nome Completo:</label>
+            <input
+              type="text"
+              id="nomeCompleto"
+              name="nomeCompleto"
+              required
+              readonly
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="tipoAtendimento">Tipo de Atendimento:</label>
+            <select
+              id="tipoAtendimento"
+              name="tipoAtendimento"
+              class="full-width"
+              required
+            >
+              <option value="" disabled selected>
+                Selecione o tipo de atendimento
+              </option>
+              <option value="Mei">Mei</option>
+              <option value="Pessoa Física">Pessoa Física</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="atendimento">Atendimento:</label>
+            <select
+              id="atendimento"
+              name="atendimento"
+              class="full-width"
+              required
+            >
+              <option value="" disabled selected>
+                Selecione o atendimento
+              </option>
+              <option value="Contábil">Contábil</option>
+              <option value="Fiscal">Fiscal</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="descricao">Descrição:</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              class="full-width"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group full-width">
+            <label for="data">Data:</label>
+            <input type="text" id="data" name="data" required />
+          </div>
+          <div class="form-group full-width">
+            <label for="horario">Horário:</label>
+            <select id="horario" name="horario" required>
+              <option value="" disabled selected>Selecione um horário</option>
+            </select>
+          </div>
+          <div class="form-group full-width terms">
+            <input
+              type="checkbox"
+              id="consentimento"
+              name="consentimento"
+              required
+            />
+            <label for="consentimento">
+              Eu li e concordo com os
+              <a href="#" id="mostrarConsentimento">termos e condições</a>.
+            </label>
+          </div>
+          <div class="form-group form-submit">
+            <button type="submit">Confirmar Agendamento</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Modal para Consentimento -->
+    <div id="consentimentoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Consentimento</h2>
+        <p>
+          Seus dados pessoais serão utilizados para agendar e gerenciar o
+          atendimento solicitado. Garantimos a privacidade e segurança das suas
+          informações. Ao continuar, você concorda com nossa política de
+          privacidade.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal para Confirmação de Agendamento -->
+    <div id="confirmacaoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-confirmacao">&times;</span>
+        <h2>Agendamento Confirmado</h2>
+        <p>
+          Seu agendamento foi confirmado! Um e-mail com os detalhes foi enviado
+          para você.
+        </p>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="components/header/header.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!--Calendário interativo-->
+    <script src="js/pages/agendamento.js"></script>
+  </body>
+</html>

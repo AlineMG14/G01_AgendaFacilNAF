@@ -9,8 +9,8 @@ body {
 
 /* Container principal */
 .container {
-  max-width: 600px;
   margin: 70px auto;
+  max-width: 800px;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -39,15 +39,18 @@ form {
   margin-bottom: 15px;
 }
 
+.full-width {
+  width: 100%;
+}
+
 label {
   font-weight: bold;
   margin-bottom: 10px;
   color: #006b64;
 }
 
-input[type="text"],
+input,
 select,
-textarea,
 button {
   padding: 12px;
   font-size: 1rem;
@@ -56,13 +59,13 @@ button {
 }
 
 input:focus,
-select:focus,
-textarea:focus {
+select:focus {
   border-color: #006b64;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 107, 100, 0.5);
 }
 
+/* Botão */
 button {
   background-color: #006b64;
   color: #fff;
@@ -98,7 +101,8 @@ button:hover {
   border-radius: 8px;
 }
 
-.close {
+.close,
+.close-validacao {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -106,13 +110,15 @@ button:hover {
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close-validacao:hover,
+.close-validacao:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Estilos para os termos e condições */
+/* Estilos para o campo de termos e condições */
 .terms {
   display: flex;
   align-items: center;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Atendimentos</title>
+    <link rel="stylesheet" href="css/pages/estudante.css" />
+    <link rel="stylesheet" href="components/header/header.css" />
+    <link rel="stylesheet" href="components/footer/footer.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="container">
+        <h2>Gerenciamento de Atendimentos - Estudante</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#agendamentos-disponiveis">Agendamentos Disponíveis</a>
+            </li>
+            <li><a href="#agendamentos-associados">Meus Atendimentos</a></li>
+            <li>
+              <a href="#agendamentos-finalizados">Atendimentos Finalizados</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section id="agendamentos-disponiveis">
+          <h3>Agendamentos Disponíveis</h3>
+          <div id="agendamentosListDisponiveis"></div>
+        </section>
+
+        <section id="agendamentos-associados">
+          <h3>Meus Atendimentos</h3>
+          <div id="agendamentosListAssociados"></div>
+        </section>
+
+        <section id="agendamentos-finalizados">
+          <h3>Atendimentos Finalizados</h3>
+          <div id="feedbackList"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="components/header/header.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="js/pages/estudante.js"></script>
+  </body>
+</html>

@@ -31,9 +31,7 @@ O principal objetivo do AgendaFácil NAF é facilitar e modernizar o processo de
 - **Facilidade de Acesso:** Proporciona um acesso mais fácil e conveniente aos serviços contábeis e fiscais, permitindo que cidadãos agendem atendimentos de forma rápida e sem complicações. Atende pessoas físicas de baixa renda, MEIs, pequenos proprietários rurais e organizações sem fins lucrativos, promovendo inclusão e acessibilidade.  
  
 - **Melhoria na Eficiência Operacional:** Auxilia a gestão do NAF na organização de horários e recursos, otimizando a distribuição de atendimentos entre estudantes e professores, garantindo um fluxo de trabalho mais eficiente. 
- 
-- **Notificações Automatizadas:** Implementa confirmações e lembretes automáticos via e-mail, reduzindo filas físicas, faltas em atendimentos e promovendo um serviço mais ágil e organizado. 
- 
+
 - **Feedback e Melhoria Contínua:** Coleta de feedbacks dos usuários para identificar melhorias e ajustar o sistema de forma a atender continuamente às necessidades reais da população.
 
 - **Otimização do Atendimento Acadêmico:** Melhora a organização e coordenação das atividades práticas entre alunos e professores, proporcionando uma experiência educativa e prática enriquecedora. 
@@ -97,7 +95,6 @@ Identificamos as principais dificuldades enfrentadas pelos diferentes grupos de 
 ## 💻 Tecnologias Utilizadas
 
 ### Ferramentas Visuais:
-- **[Figma](https://www.figma.com/)** - Prototipação das telas do MVP, possibilitando uma visualização prévia das interfaces.
 - **[Canva](https://www.canva.com/)** - Utilizado para criação de elementos visuais e imagens do projeto.
 
 ### Ferramentas de Gestão e Comunicação:
@@ -117,8 +114,6 @@ Identificamos as principais dificuldades enfrentadas pelos diferentes grupos de 
 
 - **Visual Studio Code** (ou outro editor de código). 
 
-- **Node.js** (para funcionalidades e bibliotecas futuras em JavaScript). 
-
 ### Passos para execução: 
 
 1. **Clone o Repositório:**  
@@ -136,6 +131,10 @@ Identificamos as principais dificuldades enfrentadas pelos diferentes grupos de 
 - Abra o arquivo index.html diretamente no navegador, ou 
 
 - Abra o projeto no VSCode e use a extensão Live Server para visualizar o projeto em tempo real. 
+
+### Link Externo:
+- **[AgendaFácilNaF]( https://alinemg14.github.io/G01_AgendaFacilNAF)**
+
 
  ---
  
@@ -164,4 +163,4 @@ A implantação do AgendaFácil NAF é parte dessa missão, permitindo um agenda
 
 Este projeto está licenciado sob a [Licença Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).   
 
-Você pode usar, modificar e distribuir este software sob os termos desta licença. Consulte o arquivo `LICENSE` para mais detalhes. 
+Você pode usar, modificar e distribuir este software sob os termos desta licença. Consulte o arquivo `LICENSE` para mais detalhes.
